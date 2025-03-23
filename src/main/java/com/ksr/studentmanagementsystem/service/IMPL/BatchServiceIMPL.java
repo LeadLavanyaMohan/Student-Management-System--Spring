@@ -24,7 +24,7 @@ public class BatchServiceIMPL implements BatchService {
     private BatchRepository batchRepository;
 
     @Override
-    public String addCourse(BatchSaveDTO batchSaveDTO) {
+    public String addBatch(BatchSaveDTO batchSaveDTO) {
         Batch batch = new Batch(
                 batchSaveDTO.getBatchName(),
                 batchSaveDTO.getStartDate(),

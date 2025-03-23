@@ -3,6 +3,8 @@ package com.ksr.studentmanagementsystem.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="Student")
 public class Student {
@@ -17,6 +19,8 @@ public class Student {
     @Column(name = "StudentPhoneNumber",length = 10)
     private long phoneNumber;
 
+    @OneToMany(mappedBy = "student")
+    private Set<Enrollment> enrollments;
     public Student() {
     }
 

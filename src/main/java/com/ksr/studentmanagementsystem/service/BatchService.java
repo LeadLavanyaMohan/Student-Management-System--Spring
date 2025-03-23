@@ -10,7 +10,7 @@ public interface BatchService {
 
   
 
-    String addCourse(BatchSaveDTO batchSaveDTO);
+    String addBatch(BatchSaveDTO batchSaveDTO);
 
     List<BatchDTO> getAllBatches();
 

@@ -2,12 +2,14 @@ package com.ksr.studentmanagementsystem.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name ="Batch")
 public class Batch {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Batch_Id",length = 11)
+    @Column(name = "",length = 11)
     private int batchId;
     @Column(name = "Batch_Name",length = 50,nullable = false)
     private String batchName;
@@ -18,6 +20,9 @@ public class Batch {
     @ManyToOne
     @JoinColumn(name="Course_Id",nullable = false)
     private Course course;
+
+    @OneToMany(mappedBy = "batch")
+    private Set<Enrollment> enrollments;
 
     public Batch(int batchId, String batchName, String startDate, Course course) {
         this.batchId = batchId;

@@ -18,7 +18,7 @@ public class BatchController {
     @PostMapping(path = "/save")
     public String saveBatch(@RequestBody BatchSaveDTO batchSaveDTO){
 
-        String batch = batchService.addCourse(batchSaveDTO);
+        String batch = batchService.addBatch(batchSaveDTO);
         return batch+" Record Added Sucessfully";
     }
 

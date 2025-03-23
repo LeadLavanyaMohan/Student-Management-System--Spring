@@ -1,7 +1,7 @@
 package com.ksr.studentmanagementsystem.controller;
 
 import com.ksr.studentmanagementsystem.dto.*;
-import com.ksr.studentmanagementsystem.service.IMPL.CourseService;
+import com.ksr.studentmanagementsystem.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,4 +44,5 @@ public class CourseController {
         boolean deleteCourse= courseService.deleteCourse(id);
         return "Record Deleted Sucessfully";
     }
+
 }

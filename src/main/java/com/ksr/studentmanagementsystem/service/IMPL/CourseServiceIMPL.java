@@ -5,6 +5,7 @@ import com.ksr.studentmanagementsystem.dto.CourseSaveDTO;
 import com.ksr.studentmanagementsystem.dto.CourseUpdateDTO;
 import com.ksr.studentmanagementsystem.entity.Course;
 import com.ksr.studentmanagementsystem.repo.CourseRepository;
+import com.ksr.studentmanagementsystem.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CourseServiceIMPL implements CourseService{
+public class CourseServiceIMPL implements CourseService {
     @Autowired
     private CourseRepository courseRepository;
     @Override

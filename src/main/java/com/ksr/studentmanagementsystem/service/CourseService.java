@@ -1,4 +1,4 @@
-package com.ksr.studentmanagementsystem.service.IMPL;
+package com.ksr.studentmanagementsystem.service;
 
 import com.ksr.studentmanagementsystem.dto.CourseDTO;
 import com.ksr.studentmanagementsystem.dto.CourseSaveDTO;

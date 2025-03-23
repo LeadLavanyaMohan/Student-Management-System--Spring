@@ -2,6 +2,8 @@ package com.ksr.studentmanagementsystem.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name ="Course")
 public class Course {
@@ -15,6 +17,9 @@ public class Course {
     private String syllabus;
     @Column(name = "Duration",length = 10)
     private String duration;
+
+    @OneToMany(mappedBy = "course")
+    private Set<Batch> batches;
 
     public Course(int courseId, String courseName, String syllabus, String duration) {
         this.courseId = courseId;

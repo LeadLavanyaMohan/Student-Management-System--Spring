@@ -28,7 +28,7 @@ public class TeacherController {
     public String saveTeachers(@RequestBody TeacherSaveDTO teacherSaveDTO){
 
         String TeacherName = teacherService.addTeacher(teacherSaveDTO);
-        return TeacherName;
+        return TeacherName+" Record Added Sucessfully";
     }
 
     @GetMapping("/getAllTeacher")
@@ -43,7 +43,7 @@ public class TeacherController {
     public String updateTeacher(@RequestBody TeacherUpdateDTO teacherUpdateDTO){
 
         String staff = teacherService.updateTeacher(teacherUpdateDTO);
-        return staff;
+        return staff+" Record Updated Sucessfully";
     }
 
     @DeleteMapping(path = "/delete/{id}")
